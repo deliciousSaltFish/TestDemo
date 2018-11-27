@@ -52,7 +52,9 @@ public class apiContriller {
             e.printStackTrace();
         }
         String str = "WEB-INF/jsp/name";
-        return str;
+//        return str;
+        return "james";
     }
     //测试github
+
 }
