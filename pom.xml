@@ -10,7 +10,6 @@
   <packaging>war</packaging>
 
   <name>TestDemo Maven Webapp</name>
-  <!-- FIXME change it to the project's website -->
   <url>http://www.example.com</url>
 
   <properties>
@@ -137,14 +136,26 @@
       <version>2.5</version>
       <scope>provided</scope>
     </dependency>
+      <!--自定义工具包-->
+      <!--Jasont提供工具包-->
+      <dependency>
+          <groupId>jasontool</groupId>
+          <artifactId>jasontool</artifactId>
+          <version>1.0</version>
+      </dependency>
+      <!-- quartz定时任务 -->
+      <dependency>
+          <groupId>org.quartz-scheduler</groupId>
+          <artifactId>quartz</artifactId>
+          <version>2.3.0</version>
+      </dependency>
+      <!--<dependency>-->
+          <!--<groupId>org.quartz-scheduler</groupId>-->
+          <!--<artifactId>quartz-jobs</artifactId>-->
+          <!--<version>2.3.0</version>-->
+      <!--</dependency>-->
   </dependencies>
-    <!--自定义工具包-->
-    <!--Jasont提供工具包-->
-    <dependency>
-      <groupId>jasontool</groupId>
-      <artifactId>jasontool</artifactId>
-      <version>1.0</version>
-    </dependency>
+
 
 
   <build>
