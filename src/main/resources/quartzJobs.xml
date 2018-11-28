@@ -26,11 +26,7 @@
 		<property name="targetObject">
 			<ref bean="JamesTestSyncJob" />
 		</property>
-		<property name="targetMethod">
-			<!--<value>execute1</value>-->
-			<value>execute</value>
-		</property>
-		<!--<property name="targetMethod" value="execute" />-->
+		<property name="targetMethod" value="execute" />
 	</bean>
 
 	<!-- 调度触发器 -->
