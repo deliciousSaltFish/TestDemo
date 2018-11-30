@@ -9,7 +9,6 @@
         <property name="triggers">
             <list>
                 <ref bean="JamesTestSyncJobTrigger"/>
-                
             </list>
         </property>
     </bean>
