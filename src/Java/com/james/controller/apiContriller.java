@@ -1,5 +1,7 @@
 package com.james.controller;
 
+import com.james.context.Context;
+import com.james.context.ContextService;
 import com.james.dao.apiDao;
 import com.james.sevice.ServiceImp.MybatisServiceImp;
 import com.sun.deploy.net.HttpResponse;
@@ -40,12 +42,15 @@ public class apiContriller {
     //返回连接的同时返回数据
     @RequestMapping("/returnURL")
     public String returnURL(HttpServletRequest request, HttpServletResponse response) {
+        //获取配置文件的数据
+        String url=ContextService.getInstance().getConfig().getUrl();
         String name = "JAMES";
         response.setCharacterEncoding("UTF-8");
         PrintWriter out;
         try {
             out = response.getWriter();
-            out.write(name);
+//            out.write(name);
+            out.write(url);
             out.flush();
             out.close();
         } catch (IOException e) {
