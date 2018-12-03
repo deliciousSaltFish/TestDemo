@@ -2,8 +2,9 @@ package com.james.context;
 
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ApplicationContextAware;
 
-public class ContextUtil {
+public class ContextUtil implements ApplicationContextAware {
     private static ApplicationContext applicationContext;     //Spring应用上下文环境
 
     /**

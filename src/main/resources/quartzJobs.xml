@@ -26,6 +26,7 @@
 		<property name="targetObject">
 			<ref bean="JamesTestSyncJob" />
 		</property>
+		<!--这里报红不知道为什么,但是可以运行-->
 		<property name="targetMethod" value="execute" />
 	</bean>
 

@@ -43,7 +43,7 @@ public class apiContriller {
     @RequestMapping("/returnURL")
     public String returnURL(HttpServletRequest request, HttpServletResponse response) {
         //获取配置文件的数据
-        String url=ContextService.getInstance().getConfig().getUrl();
+        String url = ContextService.getInstance().getConfig().getUrl();
         String name = "JAMES";
         response.setCharacterEncoding("UTF-8");
         PrintWriter out;

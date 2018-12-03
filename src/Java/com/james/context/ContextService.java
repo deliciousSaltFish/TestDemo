@@ -3,12 +3,12 @@ package com.james.context;
 import org.springframework.context.ApplicationContext;
 
 public class ContextService {
-    private Context context = null;
+    private Context context ;
     public Context getConfig() {
         if (context == null) {
             ApplicationContext appContext = ContextUtil.getApplicationContext();
             System.out.println(appContext);
-            context = (Context)appContext.getBean(Context.class);
+            context = (Context)appContext.getBean("Context");
         }
         return context;
     }
