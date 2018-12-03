@@ -8,7 +8,7 @@ public class ContextService {
         if (context == null) {
             ApplicationContext appContext = ContextUtil.getApplicationContext();
             System.out.println(appContext);
-            context = (Context)appContext.getBean("Context");
+            context = (Context) appContext.getBean("Context");
         }
         return context;
     }

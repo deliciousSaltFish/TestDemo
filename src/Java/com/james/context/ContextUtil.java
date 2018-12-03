@@ -3,9 +3,13 @@ package com.james.context;
 import org.springframework.beans.BeansException;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.ApplicationContextAware;
+import org.springframework.stereotype.Component;
 
+@Component
 public class ContextUtil implements ApplicationContextAware {
     private static ApplicationContext applicationContext;     //Spring应用上下文环境
+//private static String xmlPath = "WEB-INF/applicationContext.xml";
+//    private static  ApplicationContext applicationContext = new FileSystemXmlApplicationContext(xmlPath);
 
     /**
      * 实现ApplicationContextAware接口的回调方法，设置上下文环境

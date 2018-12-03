@@ -2,11 +2,12 @@ package com.james.context;
 
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
-@Component
+//@Component
 public class Context {
     @Value("#{configureinfo['url']}")
-    String url = "www.baidu.com";
+    String url = null;
     public String getUrl() {
         return url;
     }

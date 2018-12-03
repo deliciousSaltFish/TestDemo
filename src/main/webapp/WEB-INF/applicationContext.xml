@@ -20,7 +20,7 @@
 	<context:annotation-config />
 	<aop:config proxy-target-class="true" />
 	<!--Spring进行对象管理-->
-	<bean id="EamContextUtil" class="com.james.context.ContextUtil"/>
+	<!--<bean id="EamContextUtil" class="com.james.context.ContextUtil"/>-->
     <!-- <util:properties/> 标签只能加载一个文件，当多个属性文件需要被加载的时候，可以使用多个该标签 -->
     <bean id="configureinfo" class="org.springframework.beans.factory.config.PropertiesFactoryBean">
         <property name="location">

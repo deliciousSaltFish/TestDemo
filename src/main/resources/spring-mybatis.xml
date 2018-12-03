@@ -12,9 +12,9 @@
     <!-- 自动扫描 -->
     <!--<context:component-scan base-package="com.james"/>-->
     <!--加载配置文件-->
-    <bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
-        <property name="location" value="classpath:jdbc.properties"/>
-    </bean>
+    <!--<bean id="propertyConfigurer" class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">-->
+        <!--<property name="location" value="classpath:jdbc.properties"/>-->
+    <!--</bean>-->
     <!-- 配置数据源 -->
     <!--<bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource"-->
           <!--destroy-method="close">-->
@@ -33,19 +33,19 @@
         <!--&lt;!&ndash; 获取连接最大等待时间 &ndash;&gt;-->
         <!--<property name="maxWait" value="${maxWait}"></property>-->
     <!--</bean>-->
-    <bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"
-          destroy-method="close">
-        <property name="driverClass" value="${driverClass}"/>
-        <property name="jdbcUrl" value="${jdbcUrl}"/>
-        <property name="user" value="${username}"/>
-        <property name="password" value="${password}"/>
-        <property name="initialPoolSize" value="${initialPoolSize}"/>
-        <property name="minPoolSize" value="${minPoolSize}"/>
-        <property name="maxPoolSize" value="${maxPoolSize}"/>
-        <property name="acquireIncrement" value="${acquireIncrement}"/>
-        <property name="maxIdleTime" value="${maxIdleTime}"/>
-        <property name="maxStatements" value="${maxStatements}"/>
-    </bean>
+    <!--<bean id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"-->
+          <!--destroy-method="close">-->
+        <!--<property name="driverClass" value="${driverClass}"/>-->
+        <!--<property name="jdbcUrl" value="${jdbcUrl}"/>-->
+        <!--<property name="user" value="${username}"/>-->
+        <!--<property name="password" value="${password}"/>-->
+        <!--<property name="initialPoolSize" value="${initialPoolSize}"/>-->
+        <!--<property name="minPoolSize" value="${minPoolSize}"/>-->
+        <!--<property name="maxPoolSize" value="${maxPoolSize}"/>-->
+        <!--<property name="acquireIncrement" value="${acquireIncrement}"/>-->
+        <!--<property name="maxIdleTime" value="${maxIdleTime}"/>-->
+        <!--<property name="maxStatements" value="${maxStatements}"/>-->
+    <!--</bean>-->
 
     <!-- spring和MyBatis完美整合，不需要mybatis的配置映射文件 -->
     <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
