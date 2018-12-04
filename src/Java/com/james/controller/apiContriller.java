@@ -41,7 +41,7 @@ public class apiContriller {
 
     //返回连接的同时返回数据
     @RequestMapping("/returnURL")
-    public String returnURL(HttpServletRequest request, HttpServletResponse response) {
+    public void returnURL(HttpServletRequest request, HttpServletResponse response) {
         //获取配置文件的数据
 //        String url ="123";
         String url = ContextService.getInstance().getConfig().getUrl();
@@ -58,7 +58,9 @@ public class apiContriller {
             e.printStackTrace();
         }
         String str = "WEB-INF/jsp/name";
-        return str;
+        //这里如果return的话,会报错,因为在上面response已经返回了,
+        // 这里再返回seesionid就不存在了
+       // return str;
 //        return "123";
     }
     //测试github
